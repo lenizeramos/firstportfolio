@@ -1,0 +1,130 @@
+@charset "UTF-8";
+
+$main-color: #ff007f;
+$background-color: #232323;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  color: white;
+}
+
+html {
+  width: 100vw;
+  height: 100vh;
+  background-color: $background-color;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: $background-color;
+}
+
+.centralize {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.space {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* MOBILE */
+@media only screen and (max-width: 600px) {
+  .centralize {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .nav-links {
+      list-style-type: none;
+      margin: 0.5rem;
+
+      li {
+        margin: 0.2rem;
+        color: $main-color;
+      }
+
+      a {
+        text-decoration: none;
+        color: $main-color;
+        :visited {
+          color: $main-color;
+        }
+      }
+    }
+  }
+}
+
+/* TABLET */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .log {
+      flex-grow: 1;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-grow: 4;
+      justify-content: space-between;
+      list-style-type: none;
+      margin: 1.5rem;
+
+      li {
+        margin: 0.2rem;
+        color: $main-color;
+      }
+
+      a {
+        text-decoration: none;
+        color: $main-color;
+        :visited {
+          color: $main-color;
+        }
+      }
+    }
+  }
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 901px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .nav-links {
+      display: flex;
+      list-style-type: none;
+      margin: 1.5rem;
+
+      li {
+        margin: 1rem;
+        color: $main-color;
+      }
+
+      a {
+        text-decoration: none;
+        color: $main-color;
+        :visited {
+          color: $main-color;
+        }
+      }
+    }
+  }
+}
