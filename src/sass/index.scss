@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Freehand&display=swap");
 
 $main-color: #ff007f;
 $background-color: #232323;
@@ -17,21 +18,18 @@ html {
   height: 100vh;
   background-color: $background-color;
   scroll-behavior: smooth;
+  
 }
 
-header {
-  background-color: $background-color;
+.header {
+  background-color: lightgreen;
   position: sticky;
   top: 0;
 }
 
-.centralize {
-  width: 60%;
-  margin: 0 auto;
-}
-
 main {
   #home {
+    background-color: lightcoral;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -46,11 +44,58 @@ main {
       color: $main-color;
     }
   }
-}
 
-.space {
-  width: 100vw;
-  height: 100vh;
+  #about {
+    background-color: lightgray;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 113px);
+
+    .picture-text {
+      background-color: lightsalmon;
+      margin-bottom: 20px;
+
+      .main-picture {
+        width: 200px;
+      }
+
+      .text-about {
+        position: relative;
+        .paper {
+          width: 380px;
+          height: 250px;
+          transform: translate(170px, -105%);
+        }
+        .text {
+          position: absolute;
+          top: -95%;
+          left: 35%;
+          padding-left: 7%;
+          padding-right: 7%;
+          color: black;
+          font-family: "Freehand", cursive;
+          font-weight: 400;
+          font-style: normal;
+          font-size: 1.2em;
+        }
+      }
+    }
+
+    .picture-trips {
+      background-color: lightsalmon;
+      margin-bottom: 20px;
+    }
+    .second-picture {
+      width: 250px;
+      transform: rotate(-0.058turn);
+    }
+    .third-picture {
+      width: 250px;
+      transform: rotate(0.058turn);
+    }
+  }
 }
 
 /* MOBILE */
@@ -88,6 +133,10 @@ main {
 
 /* TABLET */
 @media only screen and (min-width: 601px) and (max-width: 900px) {
+  .centralize {
+    width: 100%;
+    margin: 0 auto;
+  }
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -102,10 +151,10 @@ main {
       flex-grow: 4;
       justify-content: space-between;
       list-style-type: none;
-      margin: 1.5rem;
+      margin: 1rem;
 
       li {
-        margin: 0.2rem;
+        margin: 0.5rem;
         color: $main-color;
       }
 
@@ -122,6 +171,10 @@ main {
 
 /* DESKTOP */
 @media only screen and (min-width: 901px) {
+  .centralize {
+    width: 60%;
+    margin: 0 auto;
+  }
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -129,8 +182,9 @@ main {
 
     .nav-links {
       display: flex;
+      flex-flow: row wrap;
       list-style-type: none;
-      margin: 1.5rem;
+      margin: 1.5em;
 
       li {
         margin: 1rem;
