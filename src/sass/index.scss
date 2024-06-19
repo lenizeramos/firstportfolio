@@ -20,9 +20,9 @@ html {
 }
 
 header {
-  position: fixed;
+  background-color: $background-color;
+  position: sticky;
   top: 0;
-  background-color: lightblue;
 }
 
 .centralize {
@@ -32,10 +32,12 @@ header {
 
 main {
   #home {
-    background-color: lightgrey;
-    min-height: 100vh;
-    padding: 3rem;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 113px);
+
     .my-name {
       font-size: 2em;
     }
