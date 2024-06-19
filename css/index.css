@@ -11,17 +11,32 @@ html {
   width: 100vw;
   height: 100vh;
   background-color: #232323;
+  scroll-behavior: smooth;
 }
 
 header {
-  position: sticky;
+  position: fixed;
   top: 0;
-  background-color: #232323;
+  background-color: lightblue;
 }
 
 .centralize {
   width: 60%;
   margin: 0 auto;
+}
+
+main #home {
+  background-color: lightgrey;
+  min-height: 100vh;
+  padding: 3rem;
+  text-align: center;
+}
+main #home .my-name {
+  font-size: 2em;
+}
+main #home .job-position {
+  font-size: 1.5em;
+  color: #ff007f;
 }
 
 .space {
