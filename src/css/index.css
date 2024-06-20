@@ -91,34 +91,38 @@ main #home .job-title {
 }
 
 #about {
-  background-color: lightgray;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
 }
 #about .picture-text {
+  position: relative; /* Set position relative to allow absolute positioning of text */
   display: flex;
-  background-color: lightsalmon;
+  align-items: center;
+  justify-content: center;
   height: 50%;
-  width: 100%;
+  width: 50%;
 }
 #about .picture-text .main-picture {
   width: 200px;
 }
 #about .picture-text .text-about {
-  position: relative;
-}
-#about .picture-text .text-about .paper {
-  width: 380px;
-  height: 250px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex; /* flexbox to center text */
+  align-items: center;
+  justify-content: center;
+  background-image: url("../images/folha.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 #about .picture-text .text-about .text {
-  position: absolute;
-  top: -95%;
-  left: 35%;
-  padding-left: 7%;
-  padding-right: 7%;
+  padding: 0 10px 0 80px;
   color: black;
   font-family: "Freehand", cursive;
   font-weight: 400;
