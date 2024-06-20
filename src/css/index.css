@@ -143,4 +143,12 @@ main #home .job-title {
   transform: rotate(0.058turn);
 }
 
+#projects p {
+  color: #ff007f;
+  text-align: center;
+}
+#projects .grid {
+  display: grid;
+}
+
 /*# sourceMappingURL=index.css.map */
