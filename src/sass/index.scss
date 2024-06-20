@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Freehand&display=swap");
 
 $main-color: #ff007f;
 $background-color: #232323;
@@ -94,5 +95,58 @@ main {
       font-size: 1.5em;
       color: $main-color;
     }
+  }
+}
+
+#about {
+  background-color: lightgray;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+
+  .picture-text {
+    display: flex;
+    background-color: lightsalmon;
+    height: 50%;
+    width: 100%;
+
+    .main-picture {
+      width: 200px;
+    }
+
+    .text-about {
+      position: relative;
+      .paper {
+        width: 380px;
+        height: 250px;
+      }
+      .text {
+        position: absolute;
+        top: -95%;
+        left: 35%;
+        padding-left: 7%;
+        padding-right: 7%;
+        color: black;
+        font-family: "Freehand", cursive;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.2em;
+      }
+    }
+  }
+
+  .picture-trips {
+    background-color: rgb(122, 255, 215);
+    height: 50%;
+    width: 100%;
+  }
+  .second-picture {
+    width: 250px;
+    transform: rotate(-0.058turn);
+  }
+  .third-picture {
+    width: 250px;
+    transform: rotate(0.058turn);
   }
 }

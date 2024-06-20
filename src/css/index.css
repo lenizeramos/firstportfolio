@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Freehand&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -87,6 +88,55 @@ main #home .my-name {
 main #home .job-title {
   font-size: 1.5em;
   color: #ff007f;
+}
+
+#about {
+  background-color: lightgray;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+#about .picture-text {
+  display: flex;
+  background-color: lightsalmon;
+  height: 50%;
+  width: 100%;
+}
+#about .picture-text .main-picture {
+  width: 200px;
+}
+#about .picture-text .text-about {
+  position: relative;
+}
+#about .picture-text .text-about .paper {
+  width: 380px;
+  height: 250px;
+}
+#about .picture-text .text-about .text {
+  position: absolute;
+  top: -95%;
+  left: 35%;
+  padding-left: 7%;
+  padding-right: 7%;
+  color: black;
+  font-family: "Freehand", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2em;
+}
+#about .picture-trips {
+  background-color: rgb(122, 255, 215);
+  height: 50%;
+  width: 100%;
+}
+#about .second-picture {
+  width: 250px;
+  transform: rotate(-0.058turn);
+}
+#about .third-picture {
+  width: 250px;
+  transform: rotate(0.058turn);
 }
 
 /*# sourceMappingURL=index.css.map */
