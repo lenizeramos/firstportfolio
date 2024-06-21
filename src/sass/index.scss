@@ -1,7 +1,10 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Freehand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Freehand&display=swap");
 
 $main-color: #ff007f;
 $background-color: #232323;
+$secondary-background-color: #292929;
 
 * {
   margin: 0;
@@ -12,22 +15,19 @@ $background-color: #232323;
   color: white;
 }
 
-.space {
-  width: 100vw;
-  height: 100vh;
-}
-
 html {
   width: 100vw;
   height: 100vh;
   background-color: $background-color;
   scroll-behavior: smooth;
+  
 }
 
 header {
-  background-color: lightblue;
+  background-color: $secondary-background-color;
   position: sticky;
   top: 0;
+  z-index: 99999999;
 }
 
 .container {
@@ -46,6 +46,7 @@ header {
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
+  z-index: 9999;
 
   @media only screen and (max-width: 600px) {
     flex-flow: column wrap;
@@ -81,6 +82,7 @@ header {
 
 main {
   #home {
+    background-color: lightcoral;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -93,6 +95,125 @@ main {
     .job-title {
       font-size: 1.5em;
       color: $main-color;
+    }
+  }
+}
+
+#about {
+  // background-color: lightgray;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+
+  .picture-text {
+    position: relative; /* Set position relative to allow absolute positioning of text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // background-color: lightsalmon;
+    height: 50%;
+    width: 50%;
+
+    .main-picture {
+      width: 200px;
+    }
+
+    .text-about {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex; /* flexbox to center text */
+      align-items: center;
+      justify-content: center;
+      // border: 2px solid black;
+      background-image: url("../images/folha.png");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      //background-attachment: fixed;
+
+      .text {
+        padding: 0 10px 0 80px;
+        color: black;
+        font-family: "Freehand", cursive;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.2em;
+        // background: rgba(255, 255, 255, 0.8); /* Optional: Add a slight white background for better readability */
+      }
+    }
+  }
+
+  .picture-trips {
+    background-color: rgb(122, 255, 215);
+    height: 50%;
+    width: 100%;
+  }
+  .second-picture {
+    width: 250px;
+    transform: rotate(-0.058turn);
+  }
+  .third-picture {
+    width: 250px;
+    transform: rotate(0.058turn);
+  }
+}
+
+#projects {
+  overflow: hidden;
+  overflow-y: scroll;
+  
+  @media only screen and (max-width: 600px) {
+    padding-top: 355px;
+  }
+
+  @media only screen and (min-width: 769px) {
+    padding-top: 130px;
+    
+  }
+
+  p {
+    color: $main-color;
+    text-align: center;
+    padding: 2em;
+  }
+  .grid {
+    width: 100%;
+    background-color: lightseagreen;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+
+    @media only screen and (max-width: 600px) {
+      grid-template-columns: 1fr;
+      height: 100%;
+    }
+
+    @media only screen and (min-width: 601px) and (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+      height: 90vh;
+      
+    }
+    @media only screen and (min-width: 769px) {
+      height: 90vh;
+      
+    }
+
+    .project {
+      width: 100%;
+      background-color: rgba(0, 255, 64, 0.336);
+      border: 2px solid black;
+
+      img {
+        width: 100%;
+      }
     }
   }
 }
