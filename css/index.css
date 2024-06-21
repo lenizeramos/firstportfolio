@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Freehand&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +16,7 @@ html {
 }
 
 header {
-  background-color: #232323;
+  background-color: lightgreen;
   position: sticky;
   top: 0;
 }
@@ -26,6 +27,7 @@ header {
 }
 
 main #home {
+  background-color: lightcoral;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -39,10 +41,52 @@ main #home .job-position {
   font-size: 1.5em;
   color: #ff007f;
 }
-
-.space {
-  width: 100vw;
-  height: 100vh;
+main #about {
+  background-color: lightgray;
+  /* display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center; */
+  min-height: calc(100vh - 113px);
+}
+main #about .picture-text {
+  background-color: lightsalmon;
+  margin-bottom: 20px;
+}
+main #about .picture-text .main-picture {
+  width: 200px;
+}
+main #about .picture-text .text-about {
+  position: relative;
+}
+main #about .picture-text .text-about .paper {
+  width: 380px;
+  height: 250px;
+  transform: translate(170px, -105%);
+}
+main #about .picture-text .text-about .text {
+  position: absolute;
+  top: -95%;
+  left: 35%;
+  padding-left: 7%;
+  padding-right: 7%;
+  color: black;
+  font-family: "Freehand", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2em;
+}
+main #about .picture-trips {
+  background-color: lightsalmon;
+  margin-bottom: 20px;
+}
+main #about .second-picture {
+  width: 250px;
+  transform: rotate(-0.058turn);
+}
+main #about .third-picture {
+  width: 250px;
+  transform: rotate(0.058turn);
 }
 
 /* MOBILE */
