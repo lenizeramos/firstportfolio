@@ -8,11 +8,6 @@
   color: white;
 }
 
-.space {
-  width: 100vw;
-  height: 100vh;
-}
-
 html {
   width: 100vw;
   height: 100vh;
@@ -21,9 +16,10 @@ html {
 }
 
 header {
-  background-color: lightblue;
+  background-color: #292929;
   position: sticky;
   top: 0;
+  z-index: 99999999;
 }
 
 .container {
@@ -43,6 +39,7 @@ header {
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
+  z-index: 9999;
 }
 @media only screen and (max-width: 600px) {
   .navbar {
@@ -95,6 +92,7 @@ main #home .job-title {
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
+  z-index: 5;
 }
 #about .picture-text {
   position: relative; /* Set position relative to allow absolute positioning of text */
@@ -143,12 +141,59 @@ main #home .job-title {
   transform: rotate(0.058turn);
 }
 
+#projects {
+  overflow: hidden;
+  overflow-y: scroll;
+}
+@media only screen and (max-width: 600px) {
+  #projects {
+    padding-top: 355px;
+  }
+}
+@media only screen and (min-width: 769px) {
+  #projects {
+    padding-top: 130px;
+  }
+}
 #projects p {
   color: #ff007f;
   text-align: center;
+  padding: 2em;
 }
 #projects .grid {
+  width: 100%;
+  background-color: lightseagreen;
   display: grid;
+  align-items: center;
+  justify-items: center;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+}
+@media only screen and (max-width: 600px) {
+  #projects .grid {
+    grid-template-columns: 1fr;
+    height: 100%;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  #projects .grid {
+    grid-template-columns: repeat(2, 1fr);
+    height: 90vh;
+  }
+}
+@media only screen and (min-width: 769px) {
+  #projects .grid {
+    height: 90vh;
+  }
+}
+#projects .grid .project {
+  width: 100%;
+  background-color: rgba(0, 255, 64, 0.336);
+  border: 2px solid black;
+}
+#projects .grid .project img {
+  width: 100%;
 }
 
 /*# sourceMappingURL=index.css.map */

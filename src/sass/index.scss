@@ -3,6 +3,7 @@
 
 $main-color: #ff007f;
 $background-color: #232323;
+$secondary-background-color: #292929;
 
 * {
   margin: 0;
@@ -13,11 +14,6 @@ $background-color: #232323;
   color: white;
 }
 
-.space {
-  width: 100vw;
-  height: 100vh;
-}
-
 html {
   width: 100vw;
   height: 100vh;
@@ -26,9 +22,10 @@ html {
 }
 
 header {
-  background-color: lightblue;
+  background-color: $secondary-background-color;
   position: sticky;
   top: 0;
+  z-index: 99999999;
 }
 
 .container {
@@ -47,6 +44,7 @@ header {
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
+  z-index: 9999;
 
   @media only screen and (max-width: 600px) {
     flex-flow: column wrap;
@@ -104,6 +102,7 @@ main {
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
+  z-index: 5;
 
   .picture-text {
     position: relative; /* Set position relative to allow absolute positioning of text */
@@ -119,7 +118,7 @@ main {
     }
 
     .text-about {
-      position: absolute; 
+      position: absolute;
       top: 0;
       left: 0;
       width: 100%;
@@ -128,14 +127,14 @@ main {
       align-items: center;
       justify-content: center;
       // border: 2px solid black;
-      background-image: url('../images/folha.png');
+      background-image: url("../images/folha.png");
       background-position: center;
       background-size: cover;
-      background-repeat: no-repeat; 
+      background-repeat: no-repeat;
       //background-attachment: fixed;
 
       .text {
-        padding: 0 10px 0 80px; 
+        padding: 0 10px 0 80px;
         color: black;
         font-family: "Freehand", cursive;
         font-weight: 400;
@@ -162,14 +161,56 @@ main {
 }
 
 #projects {
+  overflow: hidden;
+  overflow-y: scroll;
+  
+  @media only screen and (max-width: 600px) {
+    padding-top: 355px;
+  }
+
+  @media only screen and (min-width: 769px) {
+    padding-top: 130px;
+    
+  }
+
   p {
     color: $main-color;
     text-align: center;
+    padding: 2em;
   }
   .grid {
+    width: 100%;
+    background-color: lightseagreen;
     display: grid;
-  }
-  .project {
-  
+    align-items: center;
+    justify-items: center;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+
+    @media only screen and (max-width: 600px) {
+      grid-template-columns: 1fr;
+      height: 100%;
+    }
+
+    @media only screen and (min-width: 601px) and (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+      height: 90vh;
+      
+    }
+    @media only screen and (min-width: 769px) {
+      height: 90vh;
+      
+    }
+
+    .project {
+      width: 100%;
+      background-color: rgba(0, 255, 64, 0.336);
+      border: 2px solid black;
+
+      img {
+        width: 100%;
+      }
+    }
   }
 }
