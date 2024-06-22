@@ -19,12 +19,10 @@ header {
   background-color: #292929;
   position: sticky;
   top: 0;
-  z-index: 99999999;
+  z-index: 100;
 }
 
 .container {
-  border: 2px solid red;
-  background-color: lightpink;
   width: 60%;
   margin: 0 auto;
 }
@@ -39,7 +37,6 @@ header {
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
-  z-index: 9999;
 }
 @media only screen and (max-width: 600px) {
   .navbar {
@@ -128,7 +125,6 @@ main #home .job-title {
   font-size: 1.2em;
 }
 #about .picture-trips {
-  background-color: rgb(122, 255, 215);
   height: 50%;
   width: 100%;
 }
@@ -143,14 +139,13 @@ main #home .job-title {
 
 #projects {
   overflow: hidden;
-  overflow-y: scroll;
 }
 @media only screen and (max-width: 600px) {
   #projects {
     padding-top: 355px;
   }
 }
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 601px) {
   #projects {
     padding-top: 130px;
   }
@@ -162,7 +157,6 @@ main #home .job-title {
 }
 #projects .grid {
   width: 100%;
-  background-color: lightseagreen;
   display: grid;
   align-items: center;
   justify-items: center;
@@ -189,11 +183,58 @@ main #home .job-title {
 }
 #projects .grid .project {
   width: 100%;
-  background-color: rgba(0, 255, 64, 0.336);
   border: 2px solid black;
 }
 #projects .grid .project img {
   width: 100%;
+}
+
+#skills {
+  height: 100vh;
+}
+@media only screen and (max-width: 600px) {
+  #skills {
+    padding-top: 355px;
+    height: 100%;
+  }
+}
+@media only screen and (min-width: 601px) {
+  #skills {
+    padding-top: 130px;
+  }
+}
+#skills p {
+  color: #ff007f;
+  text-align: center;
+  padding: 2em;
+}
+#skills .skills-flex {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+}
+@media only screen and (min-width: 601px) {
+  #skills .skills-flex {
+    gap: 50px;
+  }
+}
+#skills .icon-skill {
+  height: 150px;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 1em;
+}
+#skills .icon-skill img {
+  height: 70%;
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 10px;
 }
 
 /*# sourceMappingURL=index.css.map */
