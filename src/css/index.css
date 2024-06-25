@@ -237,4 +237,52 @@ main #home .job-title {
   padding-bottom: 10px;
 }
 
+#experience {
+  height: 100vh;
+}
+@media only screen and (max-width: 600px) {
+  #experience {
+    padding-top: 355px;
+    height: 100%;
+  }
+}
+@media only screen and (min-width: 601px) {
+  #experience {
+    padding-top: 130px;
+  }
+}
+#experience h2 {
+  color: #ff007f;
+  text-align: center;
+  padding: 2em;
+}
+#experience .experience-flex {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+}
+@media only screen and (max-width: 600px) {
+  #experience .experience-flex {
+    gap: 10px;
+  }
+}
+@media only screen and (min-width: 601px) {
+  #experience .experience-flex {
+    gap: 20px;
+  }
+}
+#experience .item-experience {
+  border: 2px solid #ff007f;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row wrap;
+  padding: 1em;
+}
+
 /*# sourceMappingURL=index.css.map */

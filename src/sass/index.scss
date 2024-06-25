@@ -30,7 +30,7 @@ header {
 
 .container {
   //border: 2px solid red;
- // background-color: lightpink;
+  // background-color: lightpink;
   width: 60%;
   margin: 0 auto;
 
@@ -258,5 +258,52 @@ main {
       margin: 0 auto;
       padding-bottom: 10px;
     }
+  }
+}
+
+#experience {
+  height: 100vh;
+  //background-color: lightgray;
+
+  @media only screen and (max-width: 600px) {
+    padding-top: 355px;
+    height: 100%;
+  }
+
+  @media only screen and (min-width: 601px) {
+    padding-top: 130px;
+  }
+
+  h2 {
+    color: $main-color;
+    text-align: center;
+    padding: 2em;
+  }
+
+  .experience-flex {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+
+    @media only screen and (max-width: 600px) {
+      gap: 10px;
+    }
+
+    @media only screen and (min-width: 601px) {
+      gap: 20px;
+    }
+  }
+  .item-experience {
+    border: 2px solid $main-color;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row wrap;
+    padding: 1em;
   }
 }
