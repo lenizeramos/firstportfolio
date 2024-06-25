@@ -281,8 +281,52 @@ main #home .job-title {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-direction: row wrap;
+  flex-flow: row wrap;
   padding: 1em;
+}
+
+@media only screen and (max-width: 600px) {
+  #contact {
+    padding-top: 355px;
+    height: 100%;
+  }
+}
+@media only screen and (min-width: 601px) {
+  #contact {
+    padding-top: 130px;
+  }
+}
+#contact h2 {
+  color: #ff007f;
+  text-align: center;
+  padding: 2em;
+}
+#contact .contact-flex {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+}
+@media only screen and (max-width: 600px) {
+  #contact .contact-flex {
+    gap: 10px;
+  }
+}
+@media only screen and (min-width: 601px) {
+  #contact .contact-flex {
+    gap: 20px;
+  }
+}
+#contact .icon-contact {
+  border: 2px solid #ff007f;
+  border-radius: 20%;
+  background-color: white;
+  padding: 0.5em;
+}
+#contact img {
+  height: 70px;
 }
 
 /*# sourceMappingURL=index.css.map */
