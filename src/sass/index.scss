@@ -47,6 +47,13 @@ header {
 
   @media only screen and (max-width: 600px) {
     flex-flow: column wrap;
+    display: flex;
+    justify-content: space-between;
+    #burguer {
+      padding: 0.5em;
+      cursor: pointer;
+      color: $main-color;
+    }
   }
 
   .nav-links {
@@ -55,7 +62,9 @@ header {
     margin: 1em;
 
     @media only screen and (max-width: 600px) {
+      display: none;
       flex-flow: column wrap;
+      margin: 0.2em;
     }
 
     li {
@@ -103,6 +112,10 @@ main {
   justify-content: center;
   align-items: center;
   z-index: 5;
+
+  @media only screen and (max-width: 600px) {
+    padding-top: 360px;
+  }
 
   .picture-text {
     position: relative; /* Set position relative to allow absolute positioning of text */
@@ -165,7 +178,7 @@ main {
   //overflow-y: scroll;
 
   @media only screen and (max-width: 600px) {
-    padding-top: 355px;
+    padding-top: 360px;
   }
 
   @media only screen and (min-width: 601px) {
@@ -216,7 +229,7 @@ main {
   //background-color: lightgray;
 
   @media only screen and (max-width: 600px) {
-    padding-top: 355px;
+    padding-top: 360px;
     height: 100%;
   }
 
@@ -266,7 +279,7 @@ main {
   //background-color: lightgray;
 
   @media only screen and (max-width: 600px) {
-    padding-top: 355px;
+    padding-top: 360px;
     height: 100%;
   }
 
@@ -312,7 +325,7 @@ main {
   // background-color: lightgray;
 
   @media only screen and (max-width: 600px) {
-    padding-top: 355px;
+    padding-top: 360px;
     height: 100%;
   }
 
