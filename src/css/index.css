@@ -329,4 +329,13 @@ main #home .job-title {
   height: 70px;
 }
 
+.footer {
+  background-color: #292929;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
 /*# sourceMappingURL=index.css.map */
