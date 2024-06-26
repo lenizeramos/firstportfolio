@@ -41,6 +41,13 @@ header {
 @media only screen and (max-width: 600px) {
   .navbar {
     flex-flow: column wrap;
+    display: flex;
+    justify-content: space-between;
+  }
+  .navbar #burguer {
+    padding: 0.5em;
+    cursor: pointer;
+    color: #ff007f;
   }
 }
 .navbar .nav-links {
@@ -50,7 +57,9 @@ header {
 }
 @media only screen and (max-width: 600px) {
   .navbar .nav-links {
+    display: none;
     flex-flow: column wrap;
+    margin: 0.2em;
   }
 }
 .navbar .nav-links li {
@@ -90,6 +99,11 @@ main #home .job-title {
   justify-content: center;
   align-items: center;
   z-index: 5;
+}
+@media only screen and (max-width: 600px) {
+  #about {
+    padding-top: 360px;
+  }
 }
 #about .picture-text {
   position: relative; /* Set position relative to allow absolute positioning of text */
@@ -142,7 +156,7 @@ main #home .job-title {
 }
 @media only screen and (max-width: 600px) {
   #projects {
-    padding-top: 355px;
+    padding-top: 360px;
   }
 }
 @media only screen and (min-width: 601px) {
@@ -194,7 +208,7 @@ main #home .job-title {
 }
 @media only screen and (max-width: 600px) {
   #skills {
-    padding-top: 355px;
+    padding-top: 360px;
     height: 100%;
   }
 }
@@ -242,7 +256,7 @@ main #home .job-title {
 }
 @media only screen and (max-width: 600px) {
   #experience {
-    padding-top: 355px;
+    padding-top: 360px;
     height: 100%;
   }
 }
@@ -287,7 +301,7 @@ main #home .job-title {
 
 @media only screen and (max-width: 600px) {
   #contact {
-    padding-top: 355px;
+    padding-top: 360px;
     height: 100%;
   }
 }

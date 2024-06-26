@@ -4,17 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/index.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <title>Portfolio</title>
   </head>
-  <body class="body">
+  <body class="body" onresize="changeScreenSize()">
     <header>
       <div class="container">
         <nav class="navbar">
+          <img src="images/logo.png" alt="Logo" class="logo" />
+          <span id="burguer" class="material-icons" onclick="clickMenu()"
+            >menu</span
+          >
           <div>
-            <img src="images/logo.png" alt="Logo" class="logo" />
-          </div>
-          <div>
-            <ul class="nav-links">
+            <ul class="nav-links" id="navLinks">
               <li><a href="#home">Home</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#projects">Projects</a></li>
@@ -149,5 +154,26 @@
         <p>&copy; 2024 / Leni Ramos</p>
       </div>
     </footer>
+
+    <script>
+      function changeScreenSize() {
+        if (window.innerWidth >= 600) {
+          burguer.style.display = "none";
+          navLinks.style.display = "flex";
+        } else {
+          burguer.style.display = "unset";
+        }
+      }
+
+      function clickMenu() {
+        if (navLinks.style.display === "flex") {
+          navLinks.style.display = "none";
+          burguer.style.color = "#ff007f";
+        } else {
+          navLinks.style.display = "flex";
+          burguer.style.color = "white";
+        }
+      }
+    </script>
   </body>
 </html>
