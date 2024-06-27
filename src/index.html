@@ -10,7 +10,7 @@
     />
     <title>Portfolio</title>
   </head>
-  <body class="body" onresize="changeScreenSize()">
+  <body>
     <header>
       <div class="container">
         <nav class="navbar">
@@ -19,7 +19,7 @@
             >menu</span
           >
           <div>
-            <ul class="nav-links" id="navLinks">
+            <ul id="navLinks" class="nav-links">
               <li><a href="#home">Home</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#projects">Projects</a></li>
@@ -31,6 +31,7 @@
         </nav>
       </div>
     </header>
+
     <main class="container">
       <section id="home">
         <div>
@@ -40,9 +41,8 @@
       </section>
       <section id="about">
         <div class="picture-text">
-          <img class="main-picture" src="images/paris.jpg" alt="" />
+          <img class="main-picture" src="images/paris.jpg" alt="Paris" />
           <div class="text-about">
-            <!-- Removed img with class="paper" -->
             <p class="text">
               I am Leni, a Brazilian passionate about technology and constantly
               seeking knowledge, turning lines of code into innovative
@@ -51,42 +51,50 @@
           </div>
         </div>
         <div class="picture-trips">
-          <img class="second-picture" src="images/las-vegas.jpg" alt="" />
-          <img class="third-picture" src="images/moraine-lake.jpg" alt="" />
+          <img
+            class="second-picture"
+            src="images/las-vegas.jpg"
+            alt="Las Vegas"
+          />
+          <img
+            class="third-picture"
+            src="images/moraine-lake.jpg"
+            alt="Moraine Lake"
+          />
         </div>
       </section>
 
       <section id="projects">
-        <p>Projects</p>
+        <h2>Projects</h2>
         <div class="grid">
           <div class="project">
             <a href="https://github.com/lenizeramos"
-              ><img src="images/coming soon.jpg" alt=""
+              ><img src="images/coming soon.jpg" alt="Coming Soon"
             /></a>
           </div>
           <div class="project">
             <a href="https://github.com/lenizeramos"
-              ><img src="images/coming soon.jpg" alt=""
+              ><img src="images/coming soon.jpg" alt="Coming Soon"
             /></a>
           </div>
           <div class="project">
             <a href="https://github.com/lenizeramos"
-              ><img src="images/coming soon.jpg" alt=""
+              ><img src="images/coming soon.jpg" alt="Coming Soon"
             /></a>
           </div>
           <div class="project">
             <a href="https://github.com/lenizeramos"
-              ><img src="images/coming soon.jpg" alt=""
+              ><img src="images/coming soon.jpg" alt="Coming Soon"
             /></a>
           </div>
           <div class="project">
             <a href="https://github.com/lenizeramos"
-              ><img src="images/coming soon.jpg" alt=""
+              ><img src="images/coming soon.jpg" alt="Coming Soon"
             /></a>
           </div>
           <div class="project">
             <a href="https://github.com/lenizeramos"
-              ><img src="images/coming soon.jpg" alt=""
+              ><img src="images/coming soon.jpg" alt="Coming Soon"
             /></a>
           </div>
         </div>
@@ -94,16 +102,20 @@
       <section id="skills">
         <p>Skills</p>
         <div class="skills-flex">
-          <div class="icon-skill">HTML<img src="images/html.png" alt="" /></div>
-          <div class="icon-skill">CSS<img src="images/css.png" alt="" /></div>
           <div class="icon-skill">
-            JAVASCRIPT<img src="images/js.png" alt="" />
+            HTML<img src="images/html.png" alt="HTML Icon" />
           </div>
           <div class="icon-skill">
-            Open-Minded<img src="images/mind.png" alt="" />
+            CSS<img src="images/css.png" alt="CSS Icon" />
           </div>
           <div class="icon-skill">
-            Communicative<img src="images/sound.png" alt="" />
+            JAVASCRIPT<img src="images/js.png" alt="JavaScript Icon" />
+          </div>
+          <div class="icon-skill">
+            Open-Minded<img src="images/mind.png" alt="Open-Minded Icon" />
+          </div>
+          <div class="icon-skill">
+            Communicative<img src="images/sound.png" alt="Communicative icon" />
           </div>
         </div>
       </section>
@@ -133,17 +145,17 @@
         <div class="contact-flex">
           <div class="icon-contact">
             <a href="https://github.com/lenizeramos" target="_blank"
-              ><img src="images/github.png" alt=""
+              ><img src="images/github.png" alt="Github icon"
             /></a>
           </div>
           <div class="icon-contact">
             <a href="https://www.linkedin.com/in/lenizeramos" target="_blank"
-              ><img src="images/linkedin.png" alt=""
+              ><img src="images/linkedin.png" alt="Linkedin icon"
             /></a>
           </div>
           <div class="icon-contact">
             <a href="mailto:lenizemr@gmail.com?"
-              ><img src="images/email.png" alt=""
+              ><img src="images/email.png" alt="Email icon"
             /></a>
           </div>
         </div>
@@ -158,22 +170,25 @@
     <script>
       function changeScreenSize() {
         if (window.innerWidth >= 600) {
-          burguer.style.display = "none";
-          navLinks.style.display = "flex";
+          document.getElementById("burguer").style.display = "none";
+          document.getElementById("navLinks").style.display = "flex";
         } else {
-          burguer.style.display = "unset";
+          document.getElementById("burguer").style.display = "unset";
         }
       }
 
       function clickMenu() {
         if (navLinks.style.display === "flex") {
-          navLinks.style.display = "none";
-          burguer.style.color = "#ff007f";
+          document.getElementById("navLinks").style.display = "none";
+          document.getElementById("burguer").style.color = "#ff007f";
         } else {
-          navLinks.style.display = "flex";
-          burguer.style.color = "white";
+          document.getElementById("navLinks").style.display = "flex";
+          document.getElementById("burguer").style.color = "white";
         }
       }
+
+      window.onload = changeScreenSize;
+      window.onresize = changeScreenSize;
     </script>
   </body>
 </html>
