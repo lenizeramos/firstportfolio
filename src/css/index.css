@@ -100,27 +100,39 @@ main #home .job-title {
   align-items: center;
   z-index: 5;
 }
+#about h2 {
+  color: #ff007f;
+  text-align: center;
+  padding: 2em;
+  font-size: 2em;
+}
 @media only screen and (max-width: 600px) {
   #about {
     padding-top: 360px;
   }
 }
+@media only screen and (min-width: 601px) {
+  #about {
+    padding-top: 130px;
+  }
+}
 #about .picture-text {
+  background-color: lightblue;
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   height: 50%;
-  width: 50%;
+  width: 100%;
 }
 #about .picture-text .main-picture {
-  width: 200px;
+  width: 30%;
 }
 #about .picture-text .text-about {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
+  right: 0;
+  width: 50%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -131,7 +143,7 @@ main #home .job-title {
   background-repeat: no-repeat;
 }
 #about .picture-text .text-about .text {
-  padding: 0 10px 0 80px;
+  padding: 0 5px 0 60px;
   color: black;
   font-family: "Freehand", cursive;
   font-weight: 400;
@@ -139,15 +151,20 @@ main #home .job-title {
   font-size: 1.2em;
 }
 #about .picture-trips {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 50%;
   width: 100%;
 }
 #about .second-picture {
-  width: 250px;
+  margin-top: 40px;
+  width: 220px;
   transform: rotate(-0.058turn);
 }
 #about .third-picture {
-  width: 250px;
+  margin-top: 40px;
+  width: 220px;
   transform: rotate(0.058turn);
 }
 
