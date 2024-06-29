@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Freehand&display=swap");
+//@import url("https://fonts.googleapis.com/css2?family=Freehand&display=swap");
 
 $main-color: #ff007f;
 $background-color: #232323;
@@ -92,11 +92,15 @@ main {
     align-items: center;
     min-height: calc(100vh - 113px);
 
+    @media only screen and (max-width: 600px) {
+      padding-top: 360px;
+    }
+
     .my-name {
-      font-size: 2em;
+      font-size: 3em;
     }
     .job-title {
-      font-size: 1.5em;
+      font-size: 2em;
       color: $main-color;
     }
   }
@@ -108,7 +112,7 @@ main {
   justify-content: center;
   align-items: center;
   z-index: 5;
- 
+
   h2 {
     color: $main-color;
     text-align: center;
@@ -124,66 +128,66 @@ main {
   }
 
   .picture-text {
-    background-color: lightblue;
-    position: relative;
     display: flex;
+    flex-flow: row;
     align-items: center;
     justify-content: space-between;
     height: 50%;
     width: 100%;
 
+    @media only screen and (max-width: 769px) {
+      overflow: hidden;
+    }
+   
+
     .main-picture {
-      width: 30%;
+      max-width: 40%;
+      max-height: 50%;
+      object-fit: cover;
+      z-index: 9;
     }
 
     .text-about {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 50%;
       height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-image: url("../images/folha.png");
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-
-      .text {
-        padding: 0 5px 0 60px;
-        color: black;
-        font-family: "Freehand", cursive;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 1.2em;
-        // background: rgba(255, 255, 255, 0.8); /* Optional: Add a slight white background for better readability */
-      }
+      width: 70%;
     }
+  }
+  .text {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    transform: rotate(0.03turn);
+    z-index: 10;
+    
   }
 
   .picture-trips {
     display: flex;
+    flex-flow: row wrap;
     align-items: center;
     justify-content: center;
     height: 50%;
-    width: 100%;
-  }
+    max-width: 100vw;
+
+    @media only screen and (max-width: 769px) {
+      overflow: hidden;
+    }
+  
   .second-picture {
-    margin-top: 40px;
-    width: 220px;
+    max-width: 50%;
     transform: rotate(-0.058turn);
+    object-fit: cover;
   }
   .third-picture {
-    margin-top: 40px;
-    width: 220px;
+    max-width: 50%;
     transform: rotate(0.058turn);
+    object-fit: cover;
   }
+}
 }
 
 #projects {
   overflow: hidden;
-  //overflow-y: scroll;
 
   @media only screen and (max-width: 600px) {
     padding-top: 360px;
@@ -197,7 +201,9 @@ main {
     color: $main-color;
     text-align: center;
     padding: 2em;
+    font-size: 2em;
   }
+
   .grid {
     width: 100%;
     display: grid;
@@ -230,7 +236,7 @@ main {
 }
 
 #skills {
-  height: 100vh;
+  //height: 100vh;
 
   @media only screen and (max-width: 600px) {
     padding-top: 360px;
@@ -241,10 +247,11 @@ main {
     padding-top: 130px;
   }
 
-  p {
+  h2 {
     color: $main-color;
     text-align: center;
     padding: 2em;
+    font-size: 2em;
   }
 
   .skills-flex {
@@ -279,7 +286,7 @@ main {
 }
 
 #experience {
-  height: 100vh;
+  //height: 100vh;
 
   @media only screen and (max-width: 600px) {
     padding-top: 360px;
@@ -294,6 +301,7 @@ main {
     color: $main-color;
     text-align: center;
     padding: 2em;
+    font-size: 2em;
   }
 
   .experience-flex {
@@ -338,6 +346,7 @@ main {
     color: $main-color;
     text-align: center;
     padding: 2em;
+    font-size: 2em;
   }
 
   .contact-flex {
