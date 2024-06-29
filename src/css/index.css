@@ -180,6 +180,7 @@ main #home .job-title {
 @media only screen and (max-width: 600px) {
   #projects {
     padding-top: 360px;
+    height: 100%;
   }
 }
 @media only screen and (min-width: 601px) {
@@ -193,7 +194,7 @@ main #home .job-title {
   padding: 2em;
   font-size: 2em;
 }
-#projects .grid {
+#projects .projects-container {
   width: 100%;
   display: grid;
   align-items: center;
@@ -203,26 +204,19 @@ main #home .job-title {
   grid-template-rows: repeat(2, auto);
 }
 @media only screen and (max-width: 600px) {
-  #projects .grid {
+  #projects .projects-container {
     grid-template-columns: 1fr;
-    height: 100%;
   }
 }
-@media only screen and (min-width: 601px) and (max-width: 768px) {
-  #projects .grid {
+@media only screen and (min-width: 601px) and (max-width: 991px) {
+  #projects .projects-container {
     grid-template-columns: repeat(2, 1fr);
-    height: 90vh;
   }
 }
-@media only screen and (min-width: 769px) {
-  #projects .grid {
-    height: 90vh;
-  }
-}
-#projects .grid .project {
+#projects .projects-container .project {
   width: 100%;
 }
-#projects .grid .project img {
+#projects .projects-container .project img {
   width: 100%;
 }
 
