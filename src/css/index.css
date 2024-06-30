@@ -42,10 +42,27 @@ header {
     display: flex;
     justify-content: space-between;
   }
-  .navbar #burguer {
+  .navbar .burguer {
     padding: 0.5em;
     cursor: pointer;
-    color: #ff007f;
+  }
+  .navbar .burguer .bar1, .navbar .burguer .bar2, .navbar .burguer .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #ff007f;
+    margin: 6px 0;
+    transition: 0.2s;
+  }
+  .navbar .change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+    background-color: pink;
+  }
+  .navbar .change .bar2 {
+    opacity: 0;
+  }
+  .navbar .change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+    background-color: pink;
   }
 }
 .navbar .nav-links {
@@ -84,7 +101,7 @@ main #home {
 }
 @media only screen and (max-width: 768px) {
   main #home {
-    padding-top: 350px;
+    padding-top: 80px;
     flex-direction: column;
   }
 }
@@ -101,12 +118,6 @@ main #home .job-title {
   color: #ff007f;
 }
 
-#about {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
-}
 #about h2 {
   color: #ff007f;
   text-align: center;
@@ -115,12 +126,14 @@ main #home .job-title {
 }
 @media only screen and (max-width: 600px) {
   #about {
-    padding-top: 330px;
+    padding-top: 110px;
+    overflow: hidden;
   }
 }
 @media only screen and (min-width: 601px) {
   #about {
     padding-top: 70px;
+    overflow: hidden;
   }
 }
 #about .picture-text {
@@ -154,7 +167,8 @@ main #home .job-title {
   justify-content: center;
   max-height: 50%;
   max-width: 100%;
-  padding-top: 80px;
+  padding-top: 70px;
+  padding-bottom: 30px;
 }
 @media only screen and (max-width: 768px) {
   #about .picture-trips {
@@ -181,7 +195,7 @@ main #home .job-title {
 }
 #about .picture-trips .fifth-picture {
   width: 200px;
-  transform: rotate(-0.058turn);
+  transform: rotate(-0.04turn);
   object-fit: cover;
   border: 10px solid white;
 }
@@ -191,7 +205,7 @@ main #home .job-title {
 }
 @media only screen and (max-width: 600px) {
   #projects {
-    padding-top: 330px;
+    padding-top: 110px;
     height: 100%;
   }
 }
@@ -234,7 +248,7 @@ main #home .job-title {
 
 @media only screen and (max-width: 600px) {
   #skills {
-    padding-top: 330px;
+    padding-top: 110px;
     height: 100%;
   }
 }
@@ -280,7 +294,7 @@ main #home .job-title {
 
 @media only screen and (max-width: 600px) {
   #experience {
-    padding-top: 330px;
+    padding-top: 110px;
     height: 100%;
   }
 }
