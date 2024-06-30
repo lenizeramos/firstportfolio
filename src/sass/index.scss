@@ -1,9 +1,8 @@
 @charset "UTF-8";
 
 $main-color: #ff007f;
-$main_background_color: #0b0b0bea;
-$second_background_color: #0b0b0b;
-$third_background_color: #0b0b0bee;
+$main_background_color:#0b0b0b;
+$second_background_color: #0b0b0bcb;
 
 
 * {
@@ -16,13 +15,13 @@ $third_background_color: #0b0b0bee;
 }
 
 html {
-  background-color: $main_background_color;
+  background-color: $second_background_color;
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
 header {
-  background-color: $second_background_color;
+  background-color: $main_background_color;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -35,6 +34,10 @@ header {
     width: 65%;
     margin: 0 auto;
   }
+}
+
+.background-color {
+  background-image: linear-gradient(to top, $main_background_color, $second_background_color);
 }
 
 .navbar {
@@ -158,14 +161,12 @@ main {
 
     .main-picture {
       max-width: 40%;
-      //max-height: 50%;
       object-fit: cover;
       border: 10px solid white;
     }
 
     .text-about {
       height: 100%;
-      //width: 70%;
     }
   }
   .text {
@@ -184,7 +185,7 @@ main {
     max-height: 50%;
     max-width: 100%;
     padding-top: 70px;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
 
     @media only screen and (max-width: 768px) {
       flex-flow: row wrap;
@@ -219,6 +220,7 @@ main {
 
 #projects {
   overflow: hidden;
+  padding-bottom: 50px;
 
   @media only screen and (max-width: 600px) {
     padding-top: 110px;
@@ -263,6 +265,7 @@ main {
 }
 
 #skills {
+  padding-bottom: 50px;
   @media only screen and (max-width: 600px) {
     padding-top: 110px;
     height: 100%;
@@ -305,12 +308,12 @@ main {
       height: 70%;
       display: block;
       margin: 0 auto;
-      padding-bottom: 10px;
     }
   }
 }
 
 #experience {
+  padding-bottom: 50px;
   @media only screen and (max-width: 600px) {
     padding-top: 110px;
     height: 100%;
@@ -356,6 +359,7 @@ main {
 }
 
 #contact {
+  padding-bottom: 50px;
   @media only screen and (max-width: 600px) {
     padding-top: 30px;
     height: 100%;

@@ -8,7 +8,7 @@
 }
 
 html {
-  background-color: rgba(11, 11, 11, 0.9176470588);
+  background-color: rgba(11, 11, 11, 0.7960784314);
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
@@ -28,6 +28,10 @@ header {
     width: 65%;
     margin: 0 auto;
   }
+}
+
+.background-color {
+  background-image: linear-gradient(to top, #0b0b0b, rgba(11, 11, 11, 0.7960784314));
 }
 
 .navbar {
@@ -168,7 +172,7 @@ main #home .job-title {
   max-height: 50%;
   max-width: 100%;
   padding-top: 70px;
-  padding-bottom: 30px;
+  padding-bottom: 50px;
 }
 @media only screen and (max-width: 768px) {
   #about .picture-trips {
@@ -202,6 +206,7 @@ main #home .job-title {
 
 #projects {
   overflow: hidden;
+  padding-bottom: 50px;
 }
 @media only screen and (max-width: 600px) {
   #projects {
@@ -246,6 +251,9 @@ main #home .job-title {
   width: 100%;
 }
 
+#skills {
+  padding-bottom: 50px;
+}
 @media only screen and (max-width: 600px) {
   #skills {
     padding-top: 110px;
@@ -289,9 +297,11 @@ main #home .job-title {
   height: 70%;
   display: block;
   margin: 0 auto;
-  padding-bottom: 10px;
 }
 
+#experience {
+  padding-bottom: 50px;
+}
 @media only screen and (max-width: 600px) {
   #experience {
     padding-top: 110px;
@@ -338,6 +348,9 @@ main #home .job-title {
   padding: 1em;
 }
 
+#contact {
+  padding-bottom: 50px;
+}
 @media only screen and (max-width: 600px) {
   #contact {
     padding-top: 30px;
@@ -385,7 +398,7 @@ main #home .job-title {
 }
 
 .footer {
-  background-color: #0b0b0b;
+  background-color: rgba(11, 11, 11, 0.7960784314);
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
