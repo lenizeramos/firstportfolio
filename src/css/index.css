@@ -159,6 +159,13 @@ main #home .job-title {
 #about .picture-text .text-about {
   height: 100%;
 }
+#about .text-mobile {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: cover;
+  transform: rotate(0.03turn);
+  z-index: 1;
+}
 #about .text {
   max-width: 100%;
   max-height: 100%;
