@@ -50,7 +50,9 @@ header {
     padding: 0.5em;
     cursor: pointer;
   }
-  .navbar .burguer .bar1, .navbar .burguer .bar2, .navbar .burguer .bar3 {
+  .navbar .burguer .bar1,
+  .navbar .burguer .bar2,
+  .navbar .burguer .bar3 {
     width: 35px;
     height: 5px;
     background-color: #ff007f;

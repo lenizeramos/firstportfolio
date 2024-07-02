@@ -1,9 +1,8 @@
 @charset "UTF-8";
 
 $main-color: #ff007f;
-$main_background_color:#0b0b0b;
+$main_background_color: #0b0b0b;
 $second_background_color: #0b0b0bcb;
-
 
 * {
   margin: 0;
@@ -37,7 +36,11 @@ header {
 }
 
 .background-color {
-  background-image: linear-gradient(to top, $main_background_color, $second_background_color);
+  background-image: linear-gradient(
+    to top,
+    $main_background_color,
+    $second_background_color
+  );
 }
 
 .navbar {
@@ -53,23 +56,26 @@ header {
     .burguer {
       padding: 0.5em;
       cursor: pointer;
-     
-      .bar1, .bar2, .bar3 {
+
+      .bar1,
+      .bar2,
+      .bar3 {
         width: 35px;
         height: 5px;
         background-color: $main-color;
         margin: 6px 0;
         transition: 0.2s;
       }
-      
     }
     .change .bar1 {
       transform: translate(0, 11px) rotate(-45deg);
       background-color: pink;
     }
-    
-    .change .bar2 {opacity: 0;}
-    
+
+    .change .bar2 {
+      opacity: 0;
+    }
+
     .change .bar3 {
       transform: translate(0, -11px) rotate(45deg);
       background-color: pink;
@@ -134,7 +140,7 @@ main {
 }
 
 #about {
-   h2 {
+  h2 {
     color: $main-color;
     text-align: center;
     padding: 2em;
