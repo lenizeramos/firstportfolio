@@ -15,86 +15,124 @@
       <div class="container">
         <nav class="navbar">
           <img src="images/logo.png" alt="Logo" class="logo" />
-          <span id="burguer" class="material-icons" onclick="clickMenu()"
-            >menu</span
-          >
+          <div id="burguer" class="burguer" onclick="clickMenu()">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
           <div>
             <ul id="navLinks" class="nav-links">
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#skills">Skills</a></li>
-              <li><a href="#experience">Experience</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a onclick="clickMenu()" href="#home">Home</a></li>
+              <li><a onclick="clickMenu()" href="#about">About</a></li>
+              <li><a onclick="clickMenu()" href="#projects">Projects</a></li>
+              <li><a onclick="clickMenu()" href="#skills">Skills</a></li>
+              <li>
+                <a onclick="clickMenu()" href="#experience">Experience</a>
+              </li>
+              <li><a onclick="clickMenu()" href="#contact">Contact</a></li>
             </ul>
           </div>
         </nav>
       </div>
     </header>
 
-    <main class="container">
-      <section id="home">
+    <main class="background-color">
+      <section id="home" class="container">
+        <div>
+          <img class="avatar" src="images/avatar.png" alt="avatar" />
+        </div>
         <div>
           <p class="my-name">Leni Ramos</p>
           <p class="job-title">Web Developer</p>
         </div>
       </section>
-      <section id="about">
+    </main>
+    <div class="background-color">
+      <section id="about" class="container">
         <h2>About me</h2>
         <div class="picture-text">
-          <img class="main-picture" src="images/paris.jpg" alt="Paris" />
-            <div class="text-about"><img class="text" src="images/about_desktop.png" alt="" srcset=""></div>
+          <img
+            class="main-picture"
+            src="images/main_picture.JPG"
+            alt="main picture"
+          />
+
+          <picture class="text-about">
+            <source class="text"
+              media="(max-width: 600px)"
+              srcset="images/about_mobile.png"
+              type="image/jpg"
+            />
+            <img
+              class="text"
+              src="images/about_desktop.png"
+              alt="text about me"
+            />
+          </picture>
         </div>
         <div class="picture-trips">
           <img
             class="second-picture"
-            src="images/las-vegas.jpg"
-            alt="Las Vegas"
+            src="images/moraine_lake.jpg"
+            alt="second picture"
           />
           <img
             class="third-picture"
-            src="images/moraine-lake.jpg"
-            alt="Moraine Lake"
+            src="images/paris.jpg"
+            alt="third picture"
+          />
+          <img
+            class="fourth-picture"
+            src="images/ny.jpg"
+            alt="fourth picture"
+          />
+          <img
+            class="fifth-picture"
+            src="images/las_vegas.jpg"
+            alt="fifth picture"
           />
         </div>
       </section>
-
-      <section id="projects">
+    </div>
+    <div class="background-color">
+      <section id="projects" class="container">
         <h2>Projects</h2>
         <div class="projects-container">
           <div class="project">
             <a href="https://github.com/lenizeramos"
-              ><img src="images/coming soon.jpg" alt="Coming Soon"
+              ><img src="images/coming_soon_1.jpg" alt="Coming Soon"
             /></a>
           </div>
           <div class="project">
             <a href="https://github.com/lenizeramos"
-              ><img src="images/coming soon.jpg" alt="Coming Soon"
+              ><img src="images/coming_soon_2.jpg" alt="Coming Soon"
             /></a>
           </div>
           <div class="project">
             <a href="https://github.com/lenizeramos"
-              ><img src="images/coming soon.jpg" alt="Coming Soon"
+              ><img src="images/coming_soon_1.jpg" alt="Coming Soon"
             /></a>
           </div>
           <div class="project">
             <a href="https://github.com/lenizeramos"
-              ><img src="images/coming soon.jpg" alt="Coming Soon"
+              ><img src="images/coming_soon_2.jpg" alt="Coming Soon"
             /></a>
           </div>
           <div class="project">
             <a href="https://github.com/lenizeramos"
-              ><img src="images/coming soon.jpg" alt="Coming Soon"
+              ><img src="images/coming_soon_1.jpg" alt="Coming Soon"
             /></a>
           </div>
           <div class="project">
             <a href="https://github.com/lenizeramos"
-              ><img src="images/coming soon.jpg" alt="Coming Soon"
+              ><img src="images/coming_soon_2.jpg" alt="Coming Soon"
             /></a>
           </div>
         </div>
       </section>
-      <section id="skills">
+    </div>
+    <div class="background-color">
+      <section id="skills" class="container">
         <h2>Skills</h2>
         <div class="skills-flex">
           <div class="icon-skill">
@@ -107,35 +145,42 @@
             JAVASCRIPT<img src="images/js.png" alt="JavaScript Icon" />
           </div>
           <div class="icon-skill">
-            Open-Minded<img src="images/mind.png" alt="Open-Minded Icon" />
+            GIT<img src="images/git.png" alt="Git Icon" />
           </div>
           <div class="icon-skill">
             Communicative<img src="images/sound.png" alt="Communicative icon" />
           </div>
+          <div class="icon-skill">
+            Open-Minded<img src="images/mind.png" alt="Open-Minded Icon" />
+          </div>
         </div>
       </section>
-      <section id="experience">
+    </div>
+    <div class="background-color">
+      <section id="experience" class="container">
         <h2>Experience</h2>
         <div class="experience-flex">
           <div class="item-experience">
-            <h3>Legal Assistant</h3>
+            <h3>Legal Assistant - CA</h3>
             <p>2022 - 2024</p>
           </div>
           <div class="item-experience">
-            <h3>Administrative Assistant</h3>
+            <h3>Administrative Assistant - CA</h3>
             <p>2019 - 2021</p>
           </div>
           <div class="item-experience">
-            <h3>Volunteer</h3>
+            <h3>Volunteer - CA</h3>
             <p>2019</p>
           </div>
           <div class="item-experience">
-            <h3>Lawyer</h3>
+            <h3>Lawyer - BR</h3>
             <p>2015 - 2019</p>
           </div>
         </div>
       </section>
-      <section id="contact">
+    </div>
+    <div class="background-color">
+      <section id="contact" class="container">
         <h2>Contact me</h2>
         <div class="contact-flex">
           <div class="icon-contact">
@@ -155,7 +200,7 @@
           </div>
         </div>
       </section>
-    </main>
+    </div>
     <footer>
       <div class="footer">
         <p>&copy; 2024 / Leni Ramos</p>
@@ -163,22 +208,31 @@
     </footer>
 
     <script>
+      const burguerIcon = document.getElementById("burguer");
+      const navLinks = document.getElementById("navLinks");
+      const phone = 600;
+
       function changeScreenSize() {
-        if (window.innerWidth >= 600) {
-          document.getElementById("burguer").style.display = "none";
-          document.getElementById("navLinks").style.display = "flex";
+        if (window.innerWidth >= phone) {
+          burguerIcon.style.display = "none";
+          navLinks.style.display = "flex";
+          navLinks.style.height = "unset";
         } else {
-          document.getElementById("burguer").style.display = "unset";
+          burguerIcon.style.display = "unset";
+          navLinks.style.display = "none";
         }
       }
 
       function clickMenu() {
-        if (navLinks.style.display === "flex") {
-          document.getElementById("navLinks").style.display = "none";
-          document.getElementById("burguer").style.color = "#ff007f";
-        } else {
-          document.getElementById("navLinks").style.display = "flex";
-          document.getElementById("burguer").style.color = "white";
+        if (window.innerWidth < phone) {
+          if (navLinks.style.display === "flex") {
+            navLinks.style.display = "none";
+            burguerIcon.style.color = "#ff007f";
+          } else {
+            navLinks.style.display = "flex";
+            navLinks.style.height = "81.5vh";
+          }
+          burguerIcon.classList.toggle("change");
         }
       }
 
