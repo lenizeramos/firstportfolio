@@ -24,6 +24,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
+  border-bottom: rgba(255, 255, 255, 0.123) 2px solid;
 }
 
 .container {
@@ -69,7 +70,7 @@ header {
     }
     .change .bar1 {
       transform: translate(0, 11px) rotate(-45deg);
-      background-color: pink;
+      background-color: #ffaeca;
     }
 
     .change .bar2 {
@@ -78,7 +79,7 @@ header {
 
     .change .bar3 {
       transform: translate(0, -11px) rotate(45deg);
-      background-color: pink;
+      background-color: #ffaeca;
     }
   }
 
